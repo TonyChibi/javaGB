@@ -65,7 +65,7 @@ public class Notebook {
         return last;
     }
 
-    
+
     @Override
     public String toString(){
         return "brand: "+brand+"\t model: "+model+"\t os:"+os+"\t ram: "+ram+"\t hdd: "+hdd+"\t ssd: "+ssd;

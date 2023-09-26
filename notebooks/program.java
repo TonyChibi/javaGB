@@ -128,7 +128,6 @@ public class program {
                                 ntbks.addAll(tempSet);
                             }
                         }
-                        else
                         break;
                     case "2": 
                        
@@ -138,17 +137,19 @@ public class program {
                         }
                         System.out.println();
                          System.out.println("print the number of lesser parameter");
-                        choise=scanner.next();
-                        for(Notebook item: ntbks){
-                            if(isSSd(item, Integer.parseInt(choise))){
-                                tempSet.add(item);
+                        if(scanner.hasNextInt()){
+                            choise=scanner.next();
+                            for(Notebook item: ntbks){
+                                if(isSSd(item, Integer.parseInt(choise))){
+                                    tempSet.add(item);
+                                }
                             }
-                        }
-                        if(tempSet.isEmpty()){
-                            System.out.println("sorry, we cannot match "+choise);
-                        }else{
-                            ntbks.clear();
-                            ntbks.addAll(tempSet);
+                            if(tempSet.isEmpty()){
+                                System.out.println("sorry, we cannot match "+choise);
+                            }else{
+                                ntbks.clear();
+                                ntbks.addAll(tempSet);
+                            }
                         }
                         break;
                     case "3": 
@@ -160,18 +161,20 @@ public class program {
 
                         System.out.println();
                         System.out.println("print the number of lesser parameter");
-                        choise=scanner.next();
+                        if(scanner.hasNextInt()){
+                            choise=scanner.next();
 
-                        for(Notebook item: ntbks){
-                            if(isHdd(item, Integer.parseInt(choise))){
-                                tempSet.add(item);
+                            for(Notebook item: ntbks){
+                                if(isHdd(item, Integer.parseInt(choise))){
+                                    tempSet.add(item);
+                                }
                             }
-                        }
-                        if(tempSet.isEmpty()){
-                            System.out.println("sorry, we cannot match "+choise);
-                        }else{
-                            ntbks.clear();
-                            ntbks.addAll(tempSet);
+                            if(tempSet.isEmpty()){
+                                System.out.println("sorry, we cannot match "+choise);
+                            }else{
+                                ntbks.clear();
+                                ntbks.addAll(tempSet);
+                            }
                         }
                         break;
                     case "4": 
@@ -274,8 +277,5 @@ public class program {
      
     }
 
-  public void showConjunction(Notebook note, String param){
-    
-    
-}
+
 }
