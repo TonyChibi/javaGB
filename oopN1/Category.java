@@ -1,10 +1,28 @@
 package homework.oopN1;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 public class Category {
     String name;
-    Object [] prods;
-    public Category(String name, Product []prods) {
+    ArrayList <Product> prods;
+    public Category(String name) {
         this.name=name;
-        this.prods=prods;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public ArrayList<Product> getProds() {
+        return this.prods;
+    }
+    public void add(Product prod){
+        this.prods.add(prod);
+    }
+
+    @Override
+    public String toString() {
+        return this.name;
     }
 }
